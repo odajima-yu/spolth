@@ -53,4 +53,5 @@ gem 'thor', '0.19.1'
 # Read more: https://github.com/shakacode/react_on_rails
 gem 'react_on_rails', '~> 6'
 
+# Read more: https://github.com/discourse/mini_racer
 gem 'mini_racer', platforms: :ruby

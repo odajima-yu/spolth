@@ -5,6 +5,8 @@ Rails.application.config.assets.version = '1.0'
 
 # Add additional assets to the asset load path
 # Rails.application.config.assets.paths << Emoji.images_path
+# Add folder with webpack generated assets to assets.paths
+Rails.application.config.assets.paths << Rails.root.join('app', 'assets', 'webpack')
 
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
@@ -16,6 +18,10 @@ Rails.application.config.assets.version = '1.0'
 # If you have a different server bundle file than your client bundle, you'll
 # need to add it here, like this:
 # Rails.application.config.assets.precompile += %w( server-bundle.js )
+Rails.application.config.assets.precompile << 'server-bundle.js'
 
-# Add folder with webpack generated assets to assets.paths
-Rails.application.config.assets.paths << Rails.root.join("app", "assets", "webpack")
+type = ENV['REACT_ON_RAILS_ENV'] == 'HOT' ? 'non_webpack' : 'static'
+Rails.application.config.assets.precompile += [
+  "application_#{type}.js",
+  "application_#{type}.css"
+]
