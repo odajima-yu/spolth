@@ -49,3 +49,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Read more: https://github.com/erikhuda/thor
 gem 'thor', '0.19.1'
+
+# Read more: https://github.com/shakacode/react_on_rails
+gem 'react_on_rails', '~> 6'
