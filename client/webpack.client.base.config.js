@@ -25,12 +25,7 @@ module.exports = {
 
       // Below libraries are listed as entry points to be sure they get included in the
       // vendor-bundle.js. Note, if we added some library here, but don't use it in the
-      // app-bundle.js, then we just wasted a bunch of space.
-      'axios',
-      'classnames',
-      'immutable',
-      'lodash',
-      'marked',
+      // app-bundle.js, then we just wasted a bunch of space.,
       'react-bootstrap',
       'react-dom',
       'react-on-rails',
