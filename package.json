@@ -1,15 +1,15 @@
 {
-  "name": "react-webpack-rails-tutorial",
+  "name": "spolth",
   "version": "0.0.1",
-  "private": true,
   "engines": {
     "node": "5.10.0",
     "npm": "3.5.0"
   },
+  "private": true,
   "scripts": {
-    "postinstall": "cd client && npm install",
     "build:dev:server": "(cd client && npm run build:dev:server --silent)",
     "hot-assets": "(cd client && npm run hot-assets)",
+    "postinstall": "cd client && npm install",
     "test": "rspec"
   }
 }
