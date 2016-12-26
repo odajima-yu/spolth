@@ -42,6 +42,9 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+
+  # Read more: https://github.com/slim-template/html2slim
+  gem 'html2slim'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -55,3 +58,6 @@ gem 'react_on_rails', '~> 6'
 
 # Read more: https://github.com/discourse/mini_racer
 gem 'mini_racer', platforms: :ruby
+
+# Use SLIM for html. Read more: https://github.com/slim-template/slim-rails
+gem 'slim-rails'
