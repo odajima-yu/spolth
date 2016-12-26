@@ -11,5 +11,8 @@
     "build:dev:server": "(cd client && npm run build:dev:server --silent)",
     "hot-assets": "(cd client && npm run hot-assets)",
     "test": "rspec"
+  },
+  "devDependencies": {
+    "babel-preset-stage-2": "^6.18.0"
   }
 }
