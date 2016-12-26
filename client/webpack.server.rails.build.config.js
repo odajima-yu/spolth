@@ -15,7 +15,7 @@ module.exports = {
   context: __dirname,
   entry: [
     'babel-polyfill',
-    './app/bundles/HelloWorld/startup/registration',
+    './app/bundles/HelloWorld/startup/registration'
   ],
   output: {
     filename: 'server-bundle.js',
@@ -25,14 +25,14 @@ module.exports = {
     extensions: ['', '.js', '.jsx'],
     alias: {
       libs: path.join(process.cwd(), 'app', 'libs'),
-    },
+    }
   },
   plugins: [
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: JSON.stringify(nodeEnv),
-      },
-    }),
+      }
+    })
   ],
   module: {
     loaders: [
@@ -52,8 +52,5 @@ module.exports = {
         ],
       },
     ],
-  },
-
-  sassResources: ['./app/assets/styles/app-variables.scss'],
-
+  }
 };

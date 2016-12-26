@@ -26,7 +26,6 @@ module.exports = {
       // Below libraries are listed as entry points to be sure they get included in the
       // vendor-bundle.js. Note, if we added some library here, but don't use it in the
       // app-bundle.js, then we just wasted a bunch of space.,
-      'react-bootstrap',
       'react-dom',
       'react-on-rails',
     ],
@@ -65,7 +64,7 @@ module.exports = {
       // Passing Infinity just creates the commons chunk, but moves no modules into it.
       // In other words, we only put what's in the vendor entry definition in vendor-bundle.js
       minChunks: Infinity,
-    }),
+    })
   ],
   module: {
     loaders: [
@@ -76,24 +75,6 @@ module.exports = {
       { test: require.resolve('jquery'), loader: 'expose?jQuery' },
       { test: require.resolve('jquery'), loader: 'expose?$' },
       { test: require.resolve('turbolinks'), loader: 'imports?this=>window' },
-
-      // Use one of these to serve jQuery for Bootstrap scripts:
-
-      // Bootstrap 3
-      { test: /bootstrap-sass\/assets\/javascripts\//, loader: 'imports?jQuery=jquery' },
-
-      // Bootstrap 4
-      { test: /bootstrap\/dist\/js\/umd\//, loader: 'imports?jQuery=jquery' },
     ],
-  },
-
-  // Place here all postCSS plugins here, so postcss-loader will apply them
-  postcss: [autoprefixer],
-
-  // Place here all SASS files with variables, mixins etc.
-  // And sass-resources-loader will load them in every CSS Module (SASS file) for you
-  // (so don't need to @import them explicitly)
-  // https://github.com/shakacode/sass-resources-loader
-  sassResources: ['./app/assets/styles/app-variables.scss'],
-
+  }
 };
