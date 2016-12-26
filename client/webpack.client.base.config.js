@@ -33,10 +33,7 @@ module.exports = {
       'marked',
       'react-bootstrap',
       'react-dom',
-      'react-redux',
       'react-on-rails',
-      'react-router-redux',
-      'redux-thunk',
     ],
 
     // This will contain the app entry points defined by webpack.hot.config and webpack.rails.config
