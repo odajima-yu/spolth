@@ -24,7 +24,7 @@ module.exports = {
   resolve: {
     extensions: ['', '.js', '.jsx'],
     alias: {
-      libs: path.join(process.cwd(), 'app', 'libs'),
+      libs: path.join(process.cwd(), 'app', 'libs')
     }
   },
   plugins: [
@@ -42,15 +42,7 @@ module.exports = {
         loaders: [
           'css/locals?modules&importLoaders=0&localIdentName=[name]__[local]__[hash:base64:5]',
         ],
-      },
-      {
-        test: /\.scss$/,
-        loaders: [
-          'css/locals?modules&importLoaders=2&localIdentName=[name]__[local]__[hash:base64:5]',
-          'sass',
-          'sass-resources',
-        ],
-      },
-    ],
+      }
+    ]
   }
 };
