@@ -1,5 +1,5 @@
-/* eslint comma-dangle: ["error",
- {"functions": "never", "arrays": "only-multiline", "objects": "only-multiline"} ] */
+/* eslint comma-dangle: ['error',
+ {'functions': 'never', 'arrays': 'only-multiline', 'objects': 'only-multiline'} ] */
 
 // Common client-side webpack configuration used by webpack.hot.config and webpack.rails.config.
 const webpack = require('webpack');
@@ -74,7 +74,7 @@ module.exports = {
       { test: require.resolve('jquery'), loader: 'expose?jQuery' },
       { test: require.resolve('jquery'), loader: 'expose?$' },
       { test: require.resolve('jquery-ujs'), loader: 'imports?jQuery=jquery' },
-      { test: require.resolve('turbolinks'), loader: 'imports?this=>window' },
+      { test: require.resolve('turbolinks'), loader: 'imports?this=>window' }
     ]
   },
 

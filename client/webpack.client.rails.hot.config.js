@@ -1,5 +1,5 @@
-/* eslint comma-dangle: ["error",
- {"functions": "never", "arrays": "only-multiline", "objects": "only-multiline"} ] */
+/* eslint comma-dangle: ['error',
+ {'functions': 'never', 'arrays': 'only-multiline', 'objects': 'only-multiline'} ] */
 
 // Run with Rails server like this:
 // rails s

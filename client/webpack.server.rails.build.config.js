@@ -1,5 +1,5 @@
-/* eslint comma-dangle: ["error",
- {"functions": "never", "arrays": "only-multiline", "objects": "only-multiline"} ] */
+/* eslint comma-dangle: ['error',
+ {'functions': 'never', 'arrays': 'only-multiline', 'objects': 'only-multiline'} ] */
 
 // Common webpack configuration for server bundle
 
@@ -18,13 +18,11 @@ module.exports = {
   ],
   output: {
     filename: 'server-bundle.js',
-    path: '../app/assets/webpack',
+    path: '../app/assets/webpack'
   },
   resolve: {
     extensions: ['', '.js', '.jsx'],
-    alias: {
-      libs: path.join(process.cwd(), 'app', 'libs')
-    }
+    alias: { libs: path.join(process.cwd(), 'app', 'libs') }
   },
   plugins: [
     new webpack.DefinePlugin({
