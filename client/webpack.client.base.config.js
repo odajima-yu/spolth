@@ -18,8 +18,6 @@ module.exports = {
     // See use of 'vendor' in the CommonsChunkPlugin inclusion below.
     vendor: [
       'babel-polyfill',
-      'es5-shim/es5-shim',
-      'es5-shim/es5-sham',
       'jquery',
       'turbolinks',
 
@@ -27,29 +25,29 @@ module.exports = {
       // vendor-bundle.js. Note, if we added some library here, but don't use it in the
       // app-bundle.js, then we just wasted a bunch of space.,
       'react-dom',
-      'react-on-rails',
+      'react-on-rails'
     ],
 
     // This will contain the app entry points defined by webpack.hot.config and webpack.rails.config
     app: [
-      './app/bundles/HelloWorld/startup/registration',
-    ],
+      './app/bundles/HelloWorld/startup/registration'
+    ]
   },
   resolve: {
     extensions: ['', '.js', '.jsx'],
     alias: {
       libs: path.join(process.cwd(), 'app', 'libs'),
       react: path.resolve('./node_modules/react'),
-      'react-dom': path.resolve('./node_modules/react-dom'),
+      'react-dom': path.resolve('./node_modules/react-dom')
     },
   },
 
   plugins: [
     new webpack.DefinePlugin({
       'process.env': {
-        NODE_ENV: JSON.stringify(nodeEnv),
+        NODE_ENV: JSON.stringify(nodeEnv)
       },
-      TRACE_TURBOLINKS: devBuild,
+      TRACE_TURBOLINKS: devBuild
     }),
 
     // https://webpack.github.io/docs/list-of-plugins.html#2-explicit-vendor-chunk
@@ -74,7 +72,7 @@ module.exports = {
 
       { test: require.resolve('jquery'), loader: 'expose?jQuery' },
       { test: require.resolve('jquery'), loader: 'expose?$' },
-      { test: require.resolve('turbolinks'), loader: 'imports?this=>window' },
+      { test: require.resolve('turbolinks'), loader: 'imports?this=>window' }
     ],
   }
 };

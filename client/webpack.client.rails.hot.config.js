@@ -26,7 +26,7 @@ config.entry.vendor.push(
 config.output = {
   filename: '[name]-bundle.js',
   path: path.join(__dirname, 'public'),
-  publicPath: `http://localhost:${hotRailsPort}/`,
+  publicPath: `http://localhost:${hotRailsPort}/`
 };
 
 config.module.loaders.push(
@@ -44,35 +44,24 @@ config.module.loaders.push(
                 {
                   transform: 'react-transform-hmr',
                   imports: ['react'],
-                  locals: ['module'],
-                },
-              ],
-            },
-          ],
-        ],
-      },
+                  locals: ['module']
+                }
+              ]
+            }
+          ]
+        ]
+      }
     },
     {
       test: /\.css$/,
       loaders: [
         'style',
-        'css?modules&importLoaders=1&localIdentName=[name]__[local]__[hash:base64:5]',
-        'postcss',
-      ],
-    },
-    {
-      test: /\.scss$/,
-      loaders: [
-        'style',
-        'css?modules&importLoaders=3&localIdentName=[name]__[local]__[hash:base64:5]',
-        'postcss',
-        'sass',
-        'sass-resources',
-      ],
+        'css?modules&importLoaders=1&localIdentName=[name]__[local]__[hash:base64:5]'
+      ]
     },
     {
       test: require.resolve('jquery-ujs'),
-      loader: 'imports?jQuery=jquery',
+      loader: 'imports?jQuery=jquery'
     }
 );
 
