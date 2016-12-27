@@ -14,7 +14,7 @@ module.exports = {
   // the project dir
   context: __dirname,
   entry: [
-    './app/bundles/HelloWorld/startup/serverRegistration'
+    './app/bundles/Spolth/startup/serverRegistration'
   ],
   output: {
     filename: 'server-bundle.js',
