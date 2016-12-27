@@ -14,8 +14,7 @@ module.exports = {
   // the project dir
   context: __dirname,
   entry: [
-    'babel-polyfill',
-    './app/bundles/HelloWorld/startup/registration'
+    './app/bundles/HelloWorld/startup/serverRegistration'
   ],
   output: {
     filename: 'server-bundle.js',
@@ -41,7 +40,7 @@ module.exports = {
         test: /\.css$/,
         loaders: [
           'css/locals?modules&importLoaders=0&localIdentName=[name]__[local]__[hash:base64:5]',
-        ],
+        ]
       }
     ]
   }

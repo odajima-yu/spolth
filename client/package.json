@@ -11,6 +11,8 @@
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
     "react-on-rails": "^6.2.1",
+    "semantic-ui-less": "^2.2.4",
+    "semantic-ui-react": "^0.63.1",
     "turbolinks": "^5.0.0"
   },
   "devDependencies": {
@@ -41,6 +43,8 @@
     "file-loader": "^0.9.0",
     "imports-loader": "^0.6.5",
     "jsdom": "^9.8.3",
+    "less": "^2.7.1",
+    "less-loader": "^2.2.3",
     "loader-utils": "^0.2.16",
     "react-addons-test-utils": "^15.4.1",
     "react-transform-hmr": "^1.0.4",
@@ -60,6 +64,7 @@
     "build:development": "webpack -w --config webpack.config.js",
     "build:production": "NODE_ENV=production webpack --config webpack.config.js",
     "build:test": "webpack --config webpack.config.js",
-    "hot-assets": "babel-node server-rails-hot.js"
+    "hot-assets": "babel-node server-rails-hot.js",
+    "postinstall": "node semantic-fix.js"
   }
 }

@@ -17,7 +17,6 @@ module.exports = {
 
     // See use of 'vendor' in the CommonsChunkPlugin inclusion below.
     vendor: [
-      'babel-polyfill',
       'jquery',
       'turbolinks',
 
@@ -30,7 +29,7 @@ module.exports = {
 
     // This will contain the app entry points defined by webpack.hot.config and webpack.rails.config
     app: [
-      './app/bundles/HelloWorld/startup/registration'
+      './app/bundles/HelloWorld/startup/clientRegistration'
     ]
   },
   resolve: {
@@ -39,7 +38,7 @@ module.exports = {
       libs: path.join(process.cwd(), 'app', 'libs'),
       react: path.resolve('./node_modules/react'),
       'react-dom': path.resolve('./node_modules/react-dom')
-    },
+    }
   },
 
   plugins: [
@@ -61,7 +60,7 @@ module.exports = {
 
       // Passing Infinity just creates the commons chunk, but moves no modules into it.
       // In other words, we only put what's in the vendor entry definition in vendor-bundle.js
-      minChunks: Infinity,
+      minChunks: Infinity
     })
   ],
   module: {
@@ -72,7 +71,10 @@ module.exports = {
 
       { test: require.resolve('jquery'), loader: 'expose?jQuery' },
       { test: require.resolve('jquery'), loader: 'expose?$' },
-      { test: require.resolve('turbolinks'), loader: 'imports?this=>window' }
-    ],
+      { test: require.resolve('turbolinks'), loader: 'imports?this=>window' },
+
+      // Semantic UI
+      { test: /app\/semantic\/semantic/, loader: 'imports?jQuery=jquery' },
+    ]
   }
 };
