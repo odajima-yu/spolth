@@ -1,6 +1,7 @@
 import ReactOnRails from 'react-on-rails';
 
 import '../../../../app/semantic/semantic';
+import '../../../../app/semantic/semantic.less';
 
 import HelloWorld from '../components/HelloWorld';
 

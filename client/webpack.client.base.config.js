@@ -32,6 +32,7 @@ module.exports = {
       './app/bundles/HelloWorld/startup/clientRegistration'
     ]
   },
+
   resolve: {
     extensions: ['', '.js', '.jsx'],
     alias: {
@@ -63,6 +64,7 @@ module.exports = {
       minChunks: Infinity
     })
   ],
+
   module: {
     loaders: [
       { test: /\.(woff2?|svg)$/, loader: 'url?limit=10000' },
@@ -71,10 +73,11 @@ module.exports = {
 
       { test: require.resolve('jquery'), loader: 'expose?jQuery' },
       { test: require.resolve('jquery'), loader: 'expose?$' },
+      { test: require.resolve('jquery-ujs'), loader: 'imports?jQuery=jquery' },
       { test: require.resolve('turbolinks'), loader: 'imports?this=>window' },
-
-      // Semantic UI
-      { test: /app\/semantic\/semantic/, loader: 'imports?jQuery=jquery' },
     ]
-  }
+  },
+
+  // Place here all postCSS plugins here, so postcss-loader will apply them
+  postcss: [autoprefixer]
 };

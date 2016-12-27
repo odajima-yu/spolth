@@ -8,19 +8,18 @@
 
 const path = require('path');
 const webpack = require('webpack');
-
 const config = require('./webpack.client.base.config');
 
 const hotRailsPort = process.env.HOT_RAILS_PORT || 3500;
 
 config.entry.app.push(
-    `webpack-dev-server/client?http://localhost:${hotRailsPort}`,
-    'webpack/hot/only-dev-server'
+  `webpack-dev-server/client?http://localhost:${hotRailsPort}`,
+  'webpack/hot/only-dev-server'
 );
 
 // These are Rails specific
 config.entry.vendor.push(
-    'jquery-ujs'
+  'jquery-ujs'
 );
 
 config.output = {
@@ -30,44 +29,50 @@ config.output = {
 };
 
 config.module.loaders.push(
-    {
-      test: /\.jsx?$/,
-      loader: 'babel',
-      exclude: /node_modules/,
-      query: {
-        plugins: [
-          [
-            'react-transform',
-            {
-              superClasses: ['React.Component', 'BaseComponent', 'Component'],
-              transforms: [
-                {
-                  transform: 'react-transform-hmr',
-                  imports: ['react'],
-                  locals: ['module']
-                }
-              ]
-            }
-          ]
+  {
+    test: /\.jsx?$/,
+    loader: 'babel',
+    exclude: /node_modules/,
+    query: {
+      plugins: [
+        [
+          'react-transform',
+          {
+            superClasses: ['React.Component', 'BaseComponent', 'Component'],
+            transforms: [
+              {
+                transform: 'react-transform-hmr',
+                imports: ['react'],
+                locals: ['module']
+              }
+            ]
+          }
         ]
-      }
-    },
-    {
-      test: /\.css$/,
-      loaders: [
-        'style',
-        'css?modules&importLoaders=1&localIdentName=[name]__[local]__[hash:base64:5]'
       ]
-    },
-    {
-      test: require.resolve('jquery-ujs'),
-      loader: 'imports?jQuery=jquery'
     }
+  },
+  {
+    test: /\.css$/,
+    loaders: [
+      'style',
+      'css?modules&importLoaders=1&localIdentName=[name]__[local]__[hash:base64:5]',
+      'postcss'
+    ]
+  },
+  {
+    test: /\.less$/,
+    loaders: [
+      'style',
+      'css?modules&importLoaders=1&localIdentName=[name]__[local]__[hash:base64:5]',
+      'postcss',
+      'less'
+    ]
+  }
 );
 
 config.plugins.push(
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin()
+  new webpack.HotModuleReplacementPlugin(),
+  new webpack.NoErrorsPlugin()
 );
 
 config.devtool = 'eval-source-map';

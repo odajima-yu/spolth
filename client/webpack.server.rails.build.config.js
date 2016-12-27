@@ -29,19 +29,13 @@ module.exports = {
   plugins: [
     new webpack.DefinePlugin({
       'process.env': {
-        NODE_ENV: JSON.stringify(nodeEnv),
+        NODE_ENV: JSON.stringify(nodeEnv)
       }
     })
   ],
   module: {
     loaders: [
-      { test: /\.jsx?$/, loader: 'babel-loader', exclude: /node_modules/ },
-      {
-        test: /\.css$/,
-        loaders: [
-          'css/locals?modules&importLoaders=0&localIdentName=[name]__[local]__[hash:base64:5]',
-        ]
-      }
+      { test: /\.jsx?$/, loader: 'babel-loader', exclude: /node_modules/ }
     ]
   }
 };
