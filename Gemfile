@@ -115,3 +115,9 @@ gem 'mini_racer', platforms: :ruby
 
 # Use SLIM for html. Read more: https://github.com/slim-template/slim-rails
 gem 'slim-rails'
+
+# Read more: https://github.com/plataformatec/devise
+gem 'devise'
+gem 'omniauth'
+# Read more: https://github.com/tigrish/devise-i18n
+gem 'devise-i18n'
