@@ -1,0 +1,19 @@
+# These are all the cops that are disabled in the default configuration.
+
+Style/AsciiComments:
+  Enabled: false
+
+Style/MultilineBlockChain:
+  Enabled: false
+
+Style/ParallelAssignment:
+  Enabled: false
+
+Style/EmptyLinesAroundAccessModifier:
+  Enabled: false
+
+Style/Lambda:
+  Enabled: false
+
+Style/NumericLiterals:
+  Enabled: false

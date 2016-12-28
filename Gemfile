@@ -63,8 +63,8 @@ group :development, :test do
 
   # Read more: https://github.com/bbatsov/rubocop
   gem 'rubocop', require: false
-  # Read more: https://github.com/YorickPeterse/ruby-lint
-  gem 'ruby-lint', require: false
+  # Read more: https://github.com/sds/slim-lint
+  gem 'slim_lint', require: false
   # Read more: https://github.com/presidentbeef/brakeman
   gem 'brakeman', require: false
   # Read more: https://github.com/rubysec/bundler-audit
