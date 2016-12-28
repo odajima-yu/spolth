@@ -33,6 +33,45 @@ gem 'jbuilder', '~> 2.5'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+
+  # Read more: https://github.com/pry/pry
+  gem 'pry'
+  # Read more: https://github.com/pry/pry-doc
+  gem 'pry-doc'
+  # Read more: https://github.com/rweng/pry-rails
+  gem 'pry-rails'
+  # Read more: https://github.com/pry/pry-stack_explorer
+  gem 'pry-stack_explorer'
+  # Read more: https://github.com/ConradIrwin/pry-rescue
+  gem 'pry-rescue'
+  # Read more: https://github.com/deivid-rodriguez/pry-byebug
+  gem 'pry-byebug'
+
+  # Read more: https://github.com/rspec/rspec-rails
+  gem 'rspec-rails'
+  gem 'rails-controller-testing'
+  # Read more: https://github.com/rspec/rspec-its
+  gem 'rspec-its'
+  # Read more: https://github.com/r7kamura/rspec-request_describer
+  gem 'rspec-request_describer'
+  # Read more: https://github.com/thoughtbot/shoulda-matchers
+  gem 'shoulda-matchers'
+  # Read more: https://github.com/thoughtbot/factory_girl_rails
+  gem 'factory_girl_rails'
+  # Read more: https://github.com/DatabaseCleaner/database_cleaner
+  gem 'database_cleaner'
+
+  # Read more: https://github.com/bbatsov/rubocop
+  gem 'rubocop', require: false
+  # Read more: https://github.com/YorickPeterse/ruby-lint
+  gem 'ruby-lint', require: false
+  # Read more: https://github.com/presidentbeef/brakeman
+  gem 'brakeman', require: false
+  # Read more: https://github.com/rubysec/bundler-audit
+  gem 'bundler-audit', require: false
+
+  # Color console output. Read more: https://github.com/sickill/rainbow
+  gem 'rainbow'
 end
 
 group :development do
@@ -42,9 +81,24 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  # Read more: https://github.com/jonleighton/spring-commands-rspec
+  gem 'spring-commands-rspec'
 
   # Read more: https://github.com/slim-template/html2slim
   gem 'html2slim'
+
+  # Read more: https://github.com/guard/guard
+  gem 'guard'
+  # Read more: https://github.com/guard/guard-rspec
+  gem 'guard-rspec', require: false
+  # Read more: https://github.com/guard/guard-livereload
+  gem 'guard-livereload'
+
+  # Read more: https://github.com/ctran/annotate_models
+  gem 'annotate'
+
+  # Read more: https://github.com/ddollar/foreman
+  gem 'foreman'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

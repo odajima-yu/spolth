@@ -3,7 +3,10 @@
 
 # Development rails requires both rails and rails-assets
 # (and rails-server-assets if server rendering)
-rails: REACT_ON_RAILS_ENV=HOT rails s -b 0.0.0.0
+rails: REACT_ON_RAILS_ENV=HOT bin/rails s -b 0.0.0.0
+
+# Guard
+guard: bin/guard
 
 # Run the hot reload server for client development
 hot-assets: sh -c 'rm app/assets/webpack/* || true && HOT_RAILS_PORT=3500 npm run hot-assets'
